@@ -18,24 +18,55 @@ html, body, .stApp, [class*="css"] { font-family: 'Inter', sans-serif; }
 .title span { display: inline-block; background: var(--primary); color: #fff; padding: 0 0.7rem; border-radius: 14px; margin-top: 0.3rem; }
 .subtitle { font-size: 1.25rem; color: var(--muted); margin: 0.8rem 0 1.4rem; line-height: 1.5; }
 
+
 /* Input */
-[data-testid="stTextArea"] label p { font-weight: 600; color: var(--text); font-size: 0.95rem; }
+[data-testid="stTextArea"] label p {
+    font-weight: 600;
+    color: var(--text);
+    font-size: 0.95rem;
+}
+
+/* Textarea background and border */
 [data-testid="stTextArea"] [data-baseweb="textarea"],
-[data-testid="stTextArea"] [data-baseweb="base-input"] {
-  background: #FAFAFF !important; border-radius: 14px !important;
+[data-testid="stTextArea"] textarea,
+.stTextArea textarea {
+    background-color: #FAFAFF !important;
+    color: #111827 !important;
+    border-radius: 14px !important;
 }
+
 [data-testid="stTextArea"] [data-baseweb="textarea"] {
-  border: 1.5px solid var(--primary-border) !important; transition: all 0.15s ease;
+    border: 1.5px solid #DDD8FA !important;
+    overflow: hidden;
+    transition: all 0.15s ease;
 }
+
+/* Focus effect */
 [data-testid="stTextArea"] [data-baseweb="textarea"]:focus-within {
-  border-color: var(--primary) !important; box-shadow: 0 0 0 3px rgba(108,92,231,0.15);
+    border-color: #6C5CE7 !important;
+    box-shadow: 0 0 0 3px rgba(108, 92, 231, 0.15) !important;
 }
+
+/* Text styling */
 [data-testid="stTextArea"] textarea {
-  background: transparent !important; color: var(--text) !important;
-  border: none !important; box-shadow: none !important; outline: none !important;
-  font-size: 1rem; padding: 0.9rem 1rem; line-height: 1.5;
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+    font-size: 1rem;
+    padding: 0.9rem 1rem;
+    line-height: 1.5;
 }
-[data-testid="stTextArea"] textarea::placeholder { color: #9CA3AF; opacity: 1; }
+
+/* Placeholder */
+[data-testid="stTextArea"] textarea::placeholder {
+    color: #9CA3AF !important;
+    opacity: 1;
+}
+
+[data-testid="InputInstructions"] {
+    display: none;
+}
+
 [data-testid="InputInstructions"] { display: none; }
 
 /* Button */
